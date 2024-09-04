@@ -26,21 +26,16 @@ mdc: true
 
 # 欢迎来到网页设计
 
-
----
-transition: fade-out
 ---
 
 # 点个名先
 
----
 ---
 
 # 自我介绍
 
 ## 杨清 石狮鹏山工贸学校
 
-# 
 - 📝 **杭州师范大学** - 教育技术学 研究生
 - **自学前端三件套** - HTML、CSS、Javascript
 - 会 前端、后端、AI、虚拟现实，还有游戏开发
@@ -67,20 +62,16 @@ h1 {
 }
 </style>
 
-<!--
-Here is another comment.
--->
-
 ---
-transition: slide-up
-level: 2
 
----
 # 授课要求
 
 ### 1. 不要扰乱课堂纪律，包括迟到早退
+
 ### 2. 不要在机房吃零食（喝水可以）
+
 ### 3. 小组为单位，乐于分享
+
 <div v-click>遵守以上要求，有什么好处？</div>
 
 <div v-click>### - 基本不会留作业，或者是作业都能在课上完成</div>
@@ -89,17 +80,164 @@ level: 2
 <div v-click>(就算是来不及搞这些，也可以给大家讲讲我去腾讯、网易的经历，或者是技术圈近期的一些趣事)
 <p v-after class="absolute bottom-45 left-90 opacity-30 transform -rotate-10">都是些课堂上学不到的新玩意儿！</p>
 </div>
+
 ---
+
+```yaml
+layout: image-right
+image: https://cover.sli.dev
+```
 
 # 网站和网页
 
-今日任务：认识网页的本质（教材p2 - p6）
+今日任务：认识网页的本质（教材 p2 - p6）
+
 - 了解网页和网站的相关知识
-- 了解HTML的基本知识和作用
+- 了解 HTML 的基本知识和作用
 
 ---
-layout: two-cols
-layoutClass: gap-16
+
+# 生活中常见的网页
+
+请同学们发言
+
+<div v-click>网页的本质是什么？</div>
+
+<div v-click><p v-after class="absolute bottom-70 left-70 opacity-50 transform -rotate-20">app?</p></div>
+<p v-after class="absolute bottom-70 left-30 opacity-30 transform -rotate-10">应用程序？</p>
+<p v-after class="absolute bottom-70 left-90 opacity-30 transform -rotate-30">浏览器？</p>
+
+<div v-click>答案是超文本标记语言！</div>
+
+---
+
+# 网页的实质（知识链接1）
+
+## 由**超文本标记语言**（Hyper Text Markup Language，HTML）编写的**文本文件**
+
+#
+
+### 超文本标记语言的核心思想：**标签化**（知识链接3）
+
+---
+
+```yaml
+layout: default
+calss: gap-2
+```
+# 标签化
+每一行都有其意义！
+
+基本格式：
+```
+<标签名>标签内容</标签名>
+```
+或者
+```
+<标签名 属性名=属性值>
+  标签内容
+</标签名>
+```
+程序只认**标签**，标签必须一行，内容可以**换行**
+
+```
+<标签名 
+  属性名=属性值>标签内容
+</标签名>
+```
+上面这种就不行了！
+
+---
+
+# 标签化
+每一行都有其意义！
+<div grid="~ cols-2 gap-4">
+<div>
+
+```html {all|1|2|3|4|5|6|7|8|9|10|1-10|3-5|all} twoslash
+<html>
+<!--文档头部-->
+<head>
+<title>我的定义一个网页</title>
+</head>
+<!--文档主体-->
+<body bgcolor=yellow text=red>
+<h1> 芝士我制作的第一个网页 </h1>
+<p>嘿！大家好！</p>
+</body>
+</html>
+```
+</div>
+<div>
+
+- `<html>` :标记文档的开始和结束，其他所有标签都得包含在html里面！
+- `<head>` ：标记文档头的开始和结束
+- `<title>` ：设置文档的标题
+- `<body>` ：主体标签
+- `<p>` ：标记一段的开始和结束
+- `<h1>` ：说明其文字是一级标题
+* p和h1可以不加```</标签名>```作为尾巴，但是初次使用不推荐这样做
+
+</div>
+</div>
+---
+
+```yaml
+layout: image-right
+image: https://preview.redd.it/nj999c0w55931.png?width=2300&format=png&auto=webp&s=8a5fed6351ff8fde9ffe1a0a238897ef568aec64
+```
+
+# 网页开发平台
+
+## Visual Studio Code
+
+简称VScode，微软出品
+- 最常用的前端人员（臭做网页的）开发平台
+- 有众多插件和可使用
+- 一个平台，可用于多种语言（HTML、Python、C#等）
+- 但是需要有代码基础才能玩转
+
+---
+
+```yaml
+layout: image-right
+image: https://preview.redd.it/nj999c0w55931.png?width=2300&format=png&auto=webp&s=8a5fed6351ff8fde9ffe1a0a238897ef568aec64
+```
+
+# 网页开发平台
+
+## Adobe Dreamweaver CS6
+
+简称DW，Adobe公司出品
+
+- 可视化网页设计平台
+- 曾经的“网页三剑客”（DW、Fireworks、Flash）
+- 无需代码基础，适合新手
+
+考虑到 VScode 上手难度较大，我们这节课还是用 DW 为主，不过也推荐感兴趣的同学自己下载个 VScode 尝鲜
+
+<style>
+.footnotes-sep {
+  @apply mt-5 opacity-10;
+}
+.footnotes {
+  @apply text-sm opacity-75;
+}
+.footnote-backref {
+  display: none;
+}
+</style>
+
+<!--
+Notes can also sync with clicks
+
+[click] This will be highlighted after the first click
+
+[click] Highlighted with `count = ref(0)`
+
+[click:3] Last click (skip two clicks)
+-->
+
 ---
 
 # Table of contents
@@ -117,9 +255,11 @@ The title will be inferred from your slide content, or you can override it with 
 <Toc v-click minDepth="1" maxDepth="2"></Toc>
 
 ---
+
+```yaml
 layout: image-right
 image: https://cover.sli.dev
----
+```
 
 # Code
 
@@ -141,9 +281,11 @@ doubled.value = 2
 <arrow v-click="[4, 5]" x1="350" y1="310" x2="195" y2="334" color="#953" width="2" arrowSize="1" />
 
 <!-- This allow you to embed external code blocks -->
+
 <<< @/snippets/external.ts#snippet
 
 <!-- Footer -->
+
 [^1]: [Learn More](https://sli.dev/guide/syntax.html#line-highlighting)
 
 <!-- Inline style -->
@@ -170,8 +312,8 @@ Notes can also sync with clicks
 -->
 
 ---
-level: 2
----
+
+## level: 2
 
 # Shiki Magic Move
 
@@ -286,8 +428,8 @@ Also, HTML elements are valid:
 -->
 
 ---
-class: px-20
----
+
+## class: px-20
 
 # Themes
 
@@ -444,7 +586,9 @@ LaTeX is supported out-of-box. Powered by [KaTeX](https://katex.org/).
 Inline $\sqrt{3x-1}+(1+x)^2$
 
 Block
-$$ {1|3|all}
+
+$$
+{1|3|all}
 \begin{aligned}
 \nabla \cdot \vec{E} &= \frac{\rho}{\varepsilon_0} \\
 \nabla \cdot \vec{B} &= 0 \\
@@ -534,9 +678,54 @@ database "MySql" {
 [Learn More](https://sli.dev/guide/syntax.html#diagrams)
 
 ---
+
 foo: bar
 dragPos:
-  square: 691,32,167,_,-16
+square: 691,32,167,\_,-16
+
+---
+
+dragPos:
+square: 0,-446,0,0
+
+---
+
+dragPos:
+square: 0,-446,0,0
+
+---
+
+dragPos:
+square: 0,-446,0,0
+
+---
+
+dragPos:
+square: 0,-446,0,0
+
+---
+
+dragPos:
+square: 0,-446,0,0
+
+---
+
+dragPos:
+square: 0,-446,0,0
+
+---
+
+dragPos:
+square: 0,-446,0,0
+
+---
+
+dragPos:
+square: 0,-446,0,0
+
+---
+dragPos:
+  square: 0,-459,0,0
 ---
 
 # Draggable Elements
@@ -562,7 +751,8 @@ Double-click on the draggable elements to edit their positions.
 </v-drag>
 ```
 
-<v-drag pos="663,206,261,_,-15">
+<v-drag pos="663,206,261,_,-15"undefinedundefinedundefinedundefinedundefinedundefinedundefinedundefinedundefined>
+
   <div text-center text-3xl border border-main rounded>
     Double-click me!
   </div>
@@ -579,9 +769,12 @@ Double-click on the draggable elements to edit their positions.
 <v-drag-arrow pos="67,452,253,46" two-way op70 />
 
 ---
+
 src: ./pages/multiple-entries.md
 hide: false
+
 ---
+
 
 ---
 
@@ -610,8 +803,10 @@ console.log(emptyArray<number>(10).reduce(fib => [...fib, fib.at(-1)! + fib.at(-
 ```
 
 ---
+
 layout: center
 class: text-center
+
 ---
 
 # Learn More
