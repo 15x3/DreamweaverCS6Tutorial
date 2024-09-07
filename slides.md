@@ -186,7 +186,7 @@ calss: gap-2
 
 ```yaml
 layout: image-right
-image: https://preview.redd.it/nj999c0w55931.png?width=2300&format=png&auto=webp&s=8a5fed6351ff8fde9ffe1a0a238897ef568aec64
+image: https://obsidian-figbed-1257930702.cos.ap-guangzhou.myqcloud.com/202409080010029.png
 ```
 
 # 网页开发平台
@@ -203,7 +203,7 @@ image: https://preview.redd.it/nj999c0w55931.png?width=2300&format=png&auto=webp
 
 ```yaml
 layout: image-right
-image: https://www.axuezy.com/wp-content/uploads/2023/04/21113546477.jpg
+image: https://obsidian-figbed-1257930702.cos.ap-guangzhou.myqcloud.com/202409080008594.png
 ```
 
 # 网页开发平台
