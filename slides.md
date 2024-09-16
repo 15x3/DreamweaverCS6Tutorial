@@ -400,6 +400,195 @@ image: https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/9354238951/p
 
 ---
 
+# `<img>`标签
+
+`<img>`标签是image（图像）的简写，在旧标准中也称为`<image>`，但是HTML5已彻底放弃这种写法，统一规定为`<img>`
+
+```html
+<img src="图片地址" alt="替代文本" width="宽度" height="高度"/>
+```
+
+- `src`属性指定图像的来源URL。
+- `alt`属性提供图像的描述性文本，当图像无法显示时，将显示此文本。这对于搜索引擎优化和可访问性非常重要。
+- `width`和`height`属性分别设置图像的宽度和高度。这些值可以是像素或百分比。
+
+例：
+```html
+<img src="example.jpg" alt="芝士示例图片" width="300" height="200"/>
+```
+来自路径“example.jpg”的示范图片，宽度300，高度200，无法显示时，将显示“芝士示例图片”文本
+
+---
+
+# `<img>`标签
+
+在 HTML 中，`<img>` 标签是自闭合标签，因为图像标签不包含内容（如文字或其他 HTML 元素）。为了简洁，HTML 允许不在 `<img>` 标签中使用闭合标签。
+
+<v-click>
+img src="example.jpg" alt="芝士示例图片" width="300" height="200"<span v-mark.circle.orange="1">/</span>
+</v-click>
+
+在早期的 HTML 版本（如 HTML4），`<img>` 可以直接写成 `<img>` 而不需要任何闭合符号。在 XHTML 中，由于其基于 XML 的规范，要求所有标签都必须有闭合标签，所以 `<img />` 这样的自闭合标签被引入。
+
+在 HTML5 中，虽然不再强制要求使用自闭合符号 `/`，但使用 `<img />` 和 `<img>` 两种方式都是允许的，它们的效果是一样的。
+
+总结：
+- **HTML4**：`<img>` 是合法的，闭合符号 `/` 不要求。
+- **XHTML**：要求自闭合标签，格式为 `<img />`。
+- **HTML5**：`<img>` 和 `<img />` 均可使用，推荐使用简洁的 `<img>`。
+
+---
+
+```yaml
+layout: two-cols-header
+```
+# `<table>`标签
+
+`<table>` 标签用于在 HTML 中创建表格。一个表格由行 (`<tr>`) 和单元格组成，单元格可以是表头 (`<th>`) 或普通单元格 (`<td>`)。
+
+::left::
+
+### 示例：
+
+```html
+<table>
+  <tr>
+    <th>姓名</th>
+    <th>年龄</th>
+    <th>职业</th>
+  </tr>
+  <tr>
+    <td>小明</td>
+    <td>22</td>
+    <td>工程师</td>
+  </tr>
+  <tr>
+    <td>小红</td>
+    <td>25</td>
+    <td>设计师</td>
+  </tr>
+</table>
+```
+
+::right::
+
+### 解释：
+
+- `<table>`：定义表格。
+- `<tr>`：定义表格行。
+- `<th>`：定义表头单元格（加粗、居中）。
+- `<td>`：定义普通单元格。
+
+### 实际效果：
+<table>
+  <tr>
+    <th>姓名</th>
+    <th>年龄</th>
+    <th>职业</th>
+  </tr>
+  <tr>
+    <td>小明</td>
+    <td>22</td>
+    <td>工程师</td>
+  </tr>
+  <tr>
+    <td>小红</td>
+    <td>25</td>
+    <td>设计师</td>
+  </tr>
+</table>
+---
+
+```yaml
+layout: two-cols-header
+```
+
+# 表格嵌套
+
+表格嵌套是指在一个表格的单元格内嵌入另一个表格。通常用于创建复杂的布局或更精细的数据结构。
+
+
+::left::
+
+### 示例：
+
+```html
+<table border="1">
+  <tr>
+    <th>姓名</th>
+    <th>信息</th>
+  </tr>
+  <tr>
+    <td>小明</td>
+    <td>
+      <table border="1">
+        <tr>
+          <th>年龄</th>
+          <th>职业</th>
+        </tr>
+        <tr>
+          <td>22</td>
+          <td>工程师</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+```
+::right::
+
+### 解释：
+- 外部 `<table>` 包含表格的主要结构。
+- 在某个单元格 `<td>` 中嵌入一个子 `<table>`，创建嵌套表格。
+- `border="1"` 添加了边框，便于查看层次结构。
+
+这种嵌套可以用来展示表格中的细节或子项信息。
+
+### 实际演示
+
+<table border="1">
+  <tr>
+    <th>姓名</th>
+    <th>信息</th>
+  </tr>
+  <tr>
+    <td>小明</td>
+    <td>
+      <table border="1">
+        <tr>
+          <th>年龄</th>
+          <th>职业</th>
+        </tr>
+        <tr>
+          <td>22</td>
+          <td>工程师</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+---
+
+# 表格嵌套
+
+表格嵌套实际上很麻烦，今天这堂课带大家用一次以后就**尽量**不用了
+
+如今主流的网页开发中，表格嵌套已不再是常用的布局方式。过去，表格嵌套常用于页面布局，但随着 CSS 和响应式设计的发展，现代开发主要使用 **CSS**（如 `flexbox` 和 `grid`）来控制布局。
+
+表格嵌套的问题：
+- **不利于响应式设计**：表格布局固定，难以在移动设备上调整。
+- **代码冗长且复杂**：嵌套表格导致 HTML 代码可读性降低，维护困难。
+- **语义不准确**：表格的本质是用于展示结构化数据，而不是布局。
+
+<div v-click>
+现代开发中，表格更多用于展示数据而不是页面布局。对于复杂布局，推荐使用 CSS 进行布局。
+
+总结：表格嵌套已基本被淘汰，主流开发更倾向于语义化 HTML 和 CSS 布局。
+
+至于 CSS 究竟是个啥，接下来的课程我们会聊到（以及用到）
+</div>
+
+---
 # Table of contents
 
 You can use the `Toc` component to generate a table of contents for your slides:
@@ -911,7 +1100,7 @@ Double-click on the draggable elements to edit their positions.
 </v-drag>
 ```
 
-<v-drag pos="663,206,261,_,-15"undefinedundefinedundefinedundefinedundefinedundefinedundefinedundefinedundefined>
+<v-drag pos="663,206,261,_,-15"undefinedundefinedundefinedundefinedundefinedundefinedundefinedundefinedundefinedundefined>
 
   <div text-center text-3xl border border-main rounded>
     Double-click me!
