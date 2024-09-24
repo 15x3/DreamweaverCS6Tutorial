@@ -589,6 +589,74 @@ layout: two-cols-header
 </div>
 
 ---
+# `<div>` 标签简介
+
+`<div>` 是一个块级元素，用于将HTML文档中的内容分组。它通常用于布局和样式应用。
+
+```html
+<div class="container">
+    <h1>欢迎来到我的网站</h1>
+    <p>这是一个示范段落。</p>
+</div>
+```
+
+`<div>` 标签的主要用途包括：
+
+1. **分组内容**：用于将多个HTML元素分组，以便于管理和样式应用。
+2. **布局**：帮助创建页面的结构和布局，可以与CSS结合使用实现响应式设计。
+3. **样式应用**：通过CSS类和ID，可以轻松地为特定部分添加样式。
+
+与表格嵌套相比，`<div>` 的优势主要有：
+
+1. **灵活性**：`<div>` 可以用于任何内容，不仅限于表格数据，适用性更广。
+2. **可读性**：使用 `<div>` 和 CSS 可以提高HTML代码的可读性和可维护性，而表格嵌套可能导致代码混乱。
+3. **响应式设计**：使用 `<div>` 可以更容易地实现响应式布局，适应不同屏幕尺寸。
+
+
+---
+# CSS 简介
+
+CSS（层叠样式表）是一种用于给网页添加样式的语言。它帮助我们控制网页的外观，比如颜色、字体和布局。
+
+### 基本结构
+
+CSS 主要由选择器和声明组成。选择器用来选择要样式化的元素，声明则定义样式属性和属性值。
+
+#### 示例：
+
+```html
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 示例</title>
+    <style>
+        body {
+            background-color: #e0e0e0; /* 设置背景颜色 */
+            font-family: Arial, sans-serif; /* 设置字体 */
+        }
+        h1 {
+            color: #2c3e50; /* 设置标题颜色 */
+        }
+        p {
+            color: #34495e; /* 设置段落颜色 */
+            font-size: 16px; /* 设置段落字体大小 */
+        }
+    </style>
+</head>
+<body>
+    <h1>欢迎学习 CSS</h1>
+    <p>这是一个简单的CSS示范。</p>
+</body>
+</html>
+```
+
+通常，css文件会和html分离使用，不过，html5也支持直接将css写在html中。
+## 本课程中，如无特殊要求，css文件必须和html分离
+
+
+---
 # Table of contents
 
 You can use the `Toc` component to generate a table of contents for your slides:
