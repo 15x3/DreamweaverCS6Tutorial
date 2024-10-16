@@ -754,9 +754,26 @@ img src="example.jpg" alt="芝士示例图片" width="300" height="200"<span v-m
 - **XHTML**：要求自闭合标签，格式为 `<img />`。
 - **HTML5**：`<img>` 和 `<img />` 均可使用，推荐使用简洁的 `<img>`。
 
+---
 
+# 知识拓展: 自闭合标签（Self-closing）
+HTML5规范声明
+## 概念: 只有开始符号而没有结束符号的标签
+- 特征: 开始符号末尾加斜杠, 如今天的`<img />`
+- 可以不需要加斜杠，但是兼容加斜杠的写法；
+
+自闭合标签举例:
+
+`<img>` 插入一幅图像, `<img>`可以没有结束标签
+
+`<link>` 主要用于链接CSS样式表, `<link>` 可以没有结束标签
+
+注释标签 `<!--...-->` (使用Ctrl+?快速输入) 注释标签用于在源代码中插入注释。注释不会显示在浏览器中
+
+你知道吗:在更早的 XHTML1.0 和 HTML4.0 中, 自闭合标签是严格要求加斜杠的
 
 ---
+
 # Table of contents
 
 You can use the `Toc` component to generate a table of contents for your slides:
