@@ -679,7 +679,7 @@ CSS 主要由选择器和声明组成。选择器用来选择要样式化的元�
 # 开源六君子
 带动中国互联网走向世界的幕后功臣
 
-<img src="https://obsidian-figbed-1257930702.cos.ap-guangzhou.myqcloud.com/Snipaste_2024-10-20_16-20-50.png" />
+<img src="https://obsidian-figbed-1257930702.cos.ap-guangzhou.myqcloud.com/Snipaste_2024-10-20_16-21-05.png" />
 
 ---
 
@@ -692,11 +692,11 @@ layout: two-cols-header
 
 ::left::
 
-此处插入图片1
+![](https://obsidian-figbed-1257930702.cos.ap-guangzhou.myqcloud.com/Snipaste_2024-10-20_16-48-36.png)
 
 ::right::
 
-此处插入图片2
+![](https://obsidian-figbed-1257930702.cos.ap-guangzhou.myqcloud.com/Snipaste_2024-10-20_16-49-27.png)
 
 <div v-click> 总结:美化后的图像能吸引更多浏览者</div>
 
@@ -725,13 +725,9 @@ layout: two-cols-header
 # 步骤0：打开DW2020，建立站点
 在开始插入图片前...
 
-建立站点
-
 ### 我们已经在过往的课堂上重复过多次了
 # 
 ## 请一位同学上来进行操作演示
-#
-### 再强调一下：这个是每节课必须要掌握的内容！
 
 ---
 
@@ -739,64 +735,70 @@ layout: two-cols-header
 
 请翻开书本P98页,准备观看老师的操作示范
 
-
 ---
 
 # 步骤2：插入LOGO图像
 
-
 ---
 
-```yaml
-layout: two-cols-header
-```
+# 复习整个步骤
+
+![](https://obsidian-figbed-1257930702.cos.ap-guangzhou.myqcloud.com/%E5%A6%82%E4%BD%95%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87.png)
+
+
+---
 
 # 观察代码
 ## 插入图像后,代码内新增了什么标签?
 
-::left::
-
-此处插入代码, 需要有动态提示
-
-
-::right::
-
-此处插入回答
+```html{all|2}
+<div id="container">
+  <div id="header"><img src="pic/logo.gif" width="165" height="85" alt="公司logo" /></div>
+  <div id="nav"><a href="#">网站首页</a>
+  <a href="#">建站套餐</a><a href="#">经典案例</a>..(此处省略)..</div>
+  <div id="banner">
+  <div id="content"> <div class="content1" id="con1">此处显示  class "content1" id "con1" 的内容</div>
+  <div class="content1" id="con2">此处显示  class "content1" id "con2" 的内容</div>
+  <div class="content1" id="con3">此处显示  class "content1" id "con3" 的内容</div>
+  <div id="side">此处显示  id "side" 的内容</div>
+  <div id="footer">此处显示  id "footer" 的内容</div>
+</div>
+```
 
 ---
 
 # `<img>`标签
 
-在 HTML 中，`<img>` 标签是自闭合标签，因为图像标签不包含内容（如文字或其他 HTML 元素）。为了简洁，HTML 允许不在 `<img>` 标签中使用闭合标签。
+`<img>`标签是image（图像）的简写，在旧标准中也称为`<image>`，但是HTML5已彻底放弃这种写法，统一规定为`<img>`
 
-<v-click>
-img src="example.jpg" alt="芝士示例图片" width="300" height="200"<span v-mark.circle.orange="1">/</span>
-</v-click>
+```html
+<img src="图片地址" alt="替代文本" width="宽度" height="高度"/>
+```
 
-在早期的 HTML 版本（如 HTML4），`<img>` 可以直接写成 `<img>` 而不需要任何闭合符号。在 XHTML 中，由于其基于 XML 的规范，要求所有标签都必须有闭合标签，所以 `<img />` 这样的自闭合标签被引入。
+- `src`属性指定图像的来源URL。
+- `alt`属性提供图像的描述性文本，当图像无法显示时，将显示此文本。这对于搜索引擎优化和可访问性非常重要。
+- `width`和`height`属性分别设置图像的宽度和高度。这些值可以是像素或百分比。
 
-在 HTML5 中，虽然不再强制要求使用自闭合符号 `/`，但使用 `<img />` 和 `<img>` 两种方式都是允许的，它们的效果是一样的。
+例：
+```html
+<img src="pic/example.jpg" alt="我去这怎么没图片啊？？？" width="300" height="200"/>
+```
 
-总结：
-- **HTML4**：`<img>` 是合法的，闭合符号 `/` 不要求。
-- **XHTML**：要求自闭合标签，格式为 `<img />`。
-- **HTML5**：`<img>` 和 `<img />` 均可使用，推荐使用简洁的 `<img>`。
+上述代码解释：来自**站点内**pic文件夹的名为“example.jpg”的图片，宽度300，高度200，无法显示时，将显示“我去这怎么没图片啊？？？”文本
 
 ---
 
 # 知识拓展: 自闭合标签（Self-closing）
-HTML5规范声明
-## 概念: 只有开始符号而没有结束符号的标签
+在 HTML 中，`<img>` 标签是自闭合标签，因为图像标签不包含内容（如文字或其他 HTML 元素）。为了简洁，HTML 允许不在 `<img>` 标签中使用闭合标签。
+
+### 自闭合标签概念: 只有开始符号而没有结束符号的标签
 - 特征: 开始符号末尾加斜杠, 如今天的`<img />`
 - 可以不需要加斜杠，但是兼容加斜杠的写法；
 
 自闭合标签举例:
-
-`<img>` 插入一幅图像, `<img>`可以没有结束标签
-
-`<link>` 主要用于链接CSS样式表, `<link>` 可以没有结束标签
-
-注释标签 `<!--...-->` (使用Ctrl+?快速输入) 注释标签用于在源代码中插入注释。注释不会显示在浏览器中
+- `<img>` —— 本节课的重点，插入一幅图像, `<img>`可以没有结束标签
+- `<link>` —— 主要用于链接CSS样式表, `<link>` 可以没有结束标签
+- `<!--...-->`注释标签 —— (使用Ctrl+?快速输入) 注释标签用于在源代码中插入注释。注释不会显示在浏览器中
 
 你知道吗:在更早的 XHTML1.0 和 HTML4.0 中, 自闭合标签是严格要求加斜杠的，在H5标准中无特别要求
 
@@ -809,6 +811,14 @@ HTML5规范声明
 
 # 试一试：在shi4-3.html中插入图像
 综合应用
+
+
+---
+
+# 总结
+
+![](https://obsidian-figbed-1257930702.cos.ap-guangzhou.myqcloud.com/%E5%A6%82%E4%BD%95%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87.png)
+
 
 
 ---
